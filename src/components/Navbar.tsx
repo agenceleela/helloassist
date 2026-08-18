@@ -33,9 +33,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <a href="#accueil" className="flex items-center space-x-2">
-            <span className="text-2xl md:text-3xl font-bold text-[#1a3a5c]">
-              Hello <span className="script-accent text-[#d63384]">Assist</span>
-            </span>
+            <img src="/logo.png" alt="Hello Assist Logo" className="h-10 md:h-12 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
