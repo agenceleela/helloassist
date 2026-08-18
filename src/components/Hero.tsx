@@ -62,14 +62,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#d63384]/20 to-[#f59e0b]/20 rounded-3xl transform rotate-6"></div>
               <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
-                <div className="aspect-square bg-gradient-to-br from-[#1a3a5c]/10 to-[#d63384]/10 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-[#d63384] to-[#f59e0b] rounded-full flex items-center justify-center">
-                      <span className="text-6xl text-white">✓</span>
-                    </div>
-                    <p className="text-[#1a3a5c] font-semibold text-lg">Libérez-vous du stress administratif</p>
-                  </div>
-                </div>
+                <img src="/image1.png" alt="Hello Assist" className="w-full h-full object-cover rounded-2xl" />
               </div>
             </div>
           </motion.div>
