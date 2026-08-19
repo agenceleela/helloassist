@@ -41,18 +41,8 @@ const About = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#d63384]/20 to-[#f59e0b]/20 rounded-3xl transform -rotate-6"></div>
             <div className="relative bg-white rounded-3xl p-4 shadow-2xl">
-              <div className="aspect-[4/5] bg-gradient-to-br from-[#1a3a5c]/20 to-[#d63384]/20 rounded-2xl flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-[#d63384] to-[#f59e0b] rounded-full flex items-center justify-center">
-                    <User className="text-white" size={64} />
-                  </div>
-                  <p className="text-[#1a3a5c] font-semibold text-lg">
-                    Votre photo ici
-                  </p>
-                  <p className="text-gray-500 text-sm mt-2">
-                    Espace réservé pour votre portrait professionnel
-                  </p>
-                </div>
+              <div className="aspect-[4/5] bg-gradient-to-br from-[#1a3a5c]/20 to-[#d63384]/20 rounded-2xl flex items-center justify-center overflow-hidden">
+                <img src="/image2.png" alt="Elodie" className="w-full h-full object-cover rounded-2xl" />
               </div>
             </div>
           </motion.div>
