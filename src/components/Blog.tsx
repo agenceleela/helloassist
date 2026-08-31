@@ -1,7 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Newspaper, Lightbulb, Tag, Calendar } from "lucide-react";
+
+// Composant animé basé sur Link de Next.js
+const MotionLink = motion(Link);
 
 const blogCategories = [
   {
@@ -9,24 +13,28 @@ const blogCategories = [
     title: "Actualités",
     description: "Les dernières nouvelles de Hello Assist et du secteur",
     color: "from-[#1a3a5c] to-[#2d4a6f]",
+    href: "#blog", // Placeholder - à remplacer quand la page sera créée
   },
   {
     icon: Lightbulb,
     title: "Conseils pratiques",
     description: "Astuces et bonnes pratiques pour votre gestion administrative",
     color: "from-[#d63384] to-[#c02772]",
+    href: "/conseils-pratiques",
   },
   {
     icon: Tag,
     title: "Offres & nouveautés",
     description: "Découvrez mes nouvelles prestations et offres spéciales",
     color: "from-[#f59e0b] to-[#d97706]",
+    href: "#blog", // Placeholder - à remplacer quand la page sera créée
   },
   {
     icon: Calendar,
     title: "Événements & ateliers",
     description: "Participez à mes ateliers et rencontres professionnelles",
     color: "from-[#10b981] to-[#059669]",
+    href: "#blog", // Placeholder - à remplacer quand la page sera créée
   },
 ];
 
@@ -58,9 +66,9 @@ const Blog = () => {
         {/* Categories Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {blogCategories.map((category, index) => (
-            <motion.a
+            <MotionLink
               key={category.title}
-              href="#blog"
+              href={category.href}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -90,7 +98,7 @@ const Blog = () => {
                   />
                 </svg>
               </div>
-            </motion.a>
+            </MotionLink>
           ))}
         </div>
       </div>
