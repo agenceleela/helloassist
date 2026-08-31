@@ -14,7 +14,7 @@ export default function ArticleAssos() {
             Associations & Loi 1901
           </span>
           <h1 className="text-3xl md:text-4xl font-bold text-[#1a3a5c] mb-4">
-            Secrétariat à distance pour les associations en Guadeloupe : gagnez du temps pour votre mission
+            Secrétariat à distance pour les associations en Guadeloupe
           </h1>
           <p className="text-gray-600 text-lg">
             Les bénévoles et salariés d'associations passent trop de temps sur l'administratif. Découvrez comment externaliser ces tâches pour mieux servir votre cause.
@@ -24,7 +24,7 @@ export default function ArticleAssos() {
         <div className="prose prose-lg text-gray-700 max-w-none">
           <h2 className="text-2xl font-bold text-[#1a3a5c] mt-8 mb-4">La réalité du tissu associatif guadeloupéen</h2>
           <p>
-            En Guadeloupe, les associations jouent un rôle social et culturel vital. Cependant, les dirigeants se retrouvent souvent coincés entre la rédaction des procès-verbaux d'assemblée générale, la gestion des adhésions et les demandes de subventions complexes (Région, Département, FSE).
+            En Guadeloupe, les associations jouent un rôle social et culturel vital. Cependant, les dirigeants se retrouvent souvent coincés entre la rédaction des procès-verbaux d'assemblée générale, la gestion des adhésions et les demandes de subventions complexes.
           </p>
 
           <h2 className="text-2xl font-bold text-[#1a3a5c] mt-8 mb-4">Ce que Hello Assist peut faire pour votre association</h2>
@@ -36,12 +36,12 @@ export default function ArticleAssos() {
 
           <h2 className="text-2xl font-bold text-[#1a3a5c] mt-8 mb-4">Un coût maîtrisé pour un impact maximal</h2>
           <p>
-            Le secrétariat à distance est une solution économiquement viable pour les associations. Vous ne payez que les heures nécessaires, sans les contraintes d'un contrat de travail à temps plein. C'est l'assurance de professionnaliser votre gestion sans peser sur votre budget déjà serré.
+            Le secrétariat à distance est une solution économiquement viable pour les associations. Vous ne payez que les heures nécessaires, sans les contraintes d'un contrat de travail à temps plein.
           </p>
         </div>
 
         <div className="mt-12 p-8 bg-gradient-to-br from-[#d63384] to-[#f59e0b] rounded-2xl text-center text-white">
-          <h3 className="text-2xl font-bold mb-4">Concentrez-vous sur votre mission, on s'occupe du reste</h3>
+          <h3 className="text-2xl font-bold mb-4">Concentrez-vous sur votre mission</h3>
           <p className="mb-6 text-white/90">Parlons de votre association et voyons comment nous pouvons vous soulager.</p>
           <Link 
             href="/#contact" 

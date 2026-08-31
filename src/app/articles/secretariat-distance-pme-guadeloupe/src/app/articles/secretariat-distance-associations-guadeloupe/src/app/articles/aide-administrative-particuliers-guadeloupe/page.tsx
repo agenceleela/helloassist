@@ -14,7 +14,7 @@ export default function ArticleParticuliers() {
             Particuliers & Familles
           </span>
           <h1 className="text-3xl md:text-4xl font-bold text-[#1a3a5c] mb-4">
-            Aide administrative à distance en Guadeloupe : simplifiez vos démarches au quotidien
+            Aide administrative à distance en Guadeloupe
           </h1>
           <p className="text-gray-600 text-lg">
             Courriers incompréhensibles, files d'attente, formulaires en ligne complexes... Libérez-vous du stress administratif avec un accompagnement professionnel et humain.
@@ -24,7 +24,7 @@ export default function ArticleParticuliers() {
         <div className="prose prose-lg text-gray-700 max-w-none">
           <h2 className="text-2xl font-bold text-[#1a3a5c] mt-8 mb-4">Pourquoi la paperasse est-elle si stressante ?</h2>
           <p>
-            Entre les démarches CAF, les déclarations d'impôts, les litiges avec les assurances ou la résiliation de contrats, la gestion administrative personnelle est une source majeure de stress. En Guadeloupe, l'accès physique à certains services peut parfois rallonger les délais, rendant la tâche encore plus fastidieuse.
+            Entre les démarches CAF, les déclarations d'impôts, les litiges avec les assurances ou la résiliation de contrats, la gestion administrative personnelle est une source majeure de stress.
           </p>
 
           <h2 className="text-2xl font-bold text-[#1a3a5c] mt-8 mb-4">Comment nous pouvons vous aider concrètement</h2>
@@ -36,7 +36,7 @@ export default function ArticleParticuliers() {
 
           <h2 className="text-2xl font-bold text-[#1a3a5c] mt-8 mb-4">Un service de confiance, proche de vous</h2>
           <p>
-            Hello Assist vous offre la tranquillité d'esprit. Nous traitons vos données avec une confidentialité absolue et nous adaptons à votre rythme. Plus besoin de sacrifier vos soirées ou vos week-ends à comprendre un jargon administratif : déléguez à des experts bienveillants.
+            Hello Assist vous offre la tranquillité d'esprit. Nous traitons vos données avec une confidentialité absolue et nous adaptons à votre rythme.
           </p>
         </div>
 

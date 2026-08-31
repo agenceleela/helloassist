@@ -14,7 +14,7 @@ export default function ArticlePME() {
             Entreprises & PME
           </span>
           <h1 className="text-3xl md:text-4xl font-bold text-[#1a3a5c] mb-4">
-            Comment optimiser la gestion administrative de votre PME en Guadeloupe en 2024 ?
+            Comment optimiser la gestion administrative de votre PME en Guadeloupe ?
           </h1>
           <p className="text-gray-600 text-lg">
             Entre les délais de l'URSSAF, la gestion des devis et le suivi client, la charge administrative pèse lourd. Découvrez comment le secrétariat à distance peut devenir votre meilleur allié local.
@@ -36,7 +36,7 @@ export default function ArticlePME() {
 
           <h2 className="text-2xl font-bold text-[#1a3a5c] mt-8 mb-4">Pourquoi choisir un secrétariat 100% à distance ?</h2>
           <p>
-            Contrairement à un recrutement local classique, le secrétariat à distance vous permet de payer uniquement le temps de travail effectif, sans charges sociales supplémentaires, sans besoin de fournir un bureau physique, et avec une flexibilité totale adaptée aux pics d'activité saisonniers (comme la période touristique ou de fin d'année).
+            Contrairement à un recrutement local classique, le secrétariat à distance vous permet de payer uniquement le temps de travail effectif, sans charges sociales supplémentaires, sans besoin de fournir un bureau physique, et avec une flexibilité totale adaptée aux pics d'activité saisonniers.
           </p>
         </div>
 
