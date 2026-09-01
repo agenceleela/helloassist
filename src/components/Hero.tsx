@@ -28,11 +28,11 @@ const Hero = () => {
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a3a5c] leading-tight mb-6">
               Trop d'administratif ? Pas assez de temps ?{" "}
-              <span className="script-accent text-[#d63384]">Hello Assist</span> s'occupe de tout pour vous.
+              <span className="script-accent text-5xl md:text-6xl lg:text-7xl text-[#d63384]">Hello Assist</span> s'occupe de tout pour vous.
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
-              Passez la main... et <span className="script-accent text-2xl text-[#d63384]">c'est fait.</span>
+              Passez la main... et <span className="script-accent text-3xl md:text-4xl text-[#d63384]">c'est fait.</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
