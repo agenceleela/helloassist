@@ -92,13 +92,13 @@ const GoogleMap = () => {
           >
             <div className="bg-white p-4 rounded-2xl shadow-md border border-gray-100 h-full min-h-[400px]">
               <iframe
-                src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.150107805556!2d-61.35112872507579!3d16.333924332297908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c1335f0b0f6f5cd%3A0x29d9c812566819e1!2sHello%20Assist!5e1!3m2!1sfr!2sfr!4v1788285947868!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.150107805556!2d-61.35112872507579!3d16.333924332297908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c1335f0b0f6f5cd%3A0x29d9c812566819e1!2sHello%20Assist!5e1!3m2!1sfr!2sfr!4v1788285947868!5m2!1sfr!2sfr"
                 width="100%"
                 height="100%"
                 style={{ border: 0, borderRadius: '12px', minHeight: '400px' }}
                 allowFullScreen
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                referrerPolicy="strict-origin-when-cross-origin"
                 title="Localisation Hello Assist - Le Moule, Guadeloupe"
               ></iframe>
             </div>
