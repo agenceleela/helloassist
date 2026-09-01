@@ -33,7 +33,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <a href="#accueil" className="flex items-center space-x-2">
-            <img src="/logo.png" alt="Hello Assist Logo" className="h-10 md:h-12 w-auto" />
+            <img 
+              src="/logo.png" 
+              alt="Hello Assist Logo" 
+              className="h-12 md:h-16 w-auto object-contain" 
+            />
           </a>
 
           {/* Desktop Navigation */}
