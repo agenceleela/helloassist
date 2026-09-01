@@ -60,7 +60,7 @@ const About = () => {
             
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a3a5c] mb-6">
               Bonjour, je suis{" "}
-              <span className="script-accent text-4xl">Élodie</span>
+              <span className="script-accent text-5xl md:text-6xl">Élodie</span>
             </h2>
             
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
