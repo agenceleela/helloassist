@@ -92,24 +92,31 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <motion.a
               key={service.title}
+              href="#contact"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-[#faf9f7] to-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group"
+              className="bg-gradient-to-br from-[#faf9f7] to-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group cursor-pointer block"
             >
               <div className="w-14 h-14 bg-gradient-to-br from-[#d63384] to-[#f59e0b] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <service.icon className="text-white" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-[#1a3a5c] mb-3">
+              <h3 className="text-xl font-bold text-[#1a3a5c] mb-3 group-hover:text-[#d63384] transition-colors duration-300">
                 {service.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 {service.description}
               </p>
-            </motion.div>
+              <div className="mt-4 flex items-center text-[#d63384] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span>En savoir plus</span>
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </motion.a>
           ))}
         </div>
       </div>
