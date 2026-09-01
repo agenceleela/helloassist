@@ -9,6 +9,7 @@ import {
   Lightbulb,
   PartyPopper,
   Users,
+  Sparkles,
 } from "lucide-react";
 
 const services = [
@@ -54,6 +55,12 @@ const services = [
     description:
       "Un accompagnement sur mesure adapté à vos besoins spécifiques. Une solution flexible et personnalisée pour chaque structure.",
   },
+  {
+    icon: Sparkles,
+    title: "Prestation à la carte",
+    description:
+      "Un besoin spécifique non listé ici ? Contactez-moi pour construire ensemble une solution sur mesure, parfaitement adaptée à vos exigences.",
+  },
 ];
 
 const Services = () => {
@@ -83,7 +90,7 @@ const Services = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
