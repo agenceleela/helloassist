@@ -41,7 +41,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://wa.me/590690466713"
+                href="https://wa.me/590691232905"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#25D366] transition-colors duration-300"
@@ -107,8 +107,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+590690466713" className="hover:text-[#d63384] transition-colors">
-                  +590 690 46 67 13
+                <a href="tel:+590691232905" className="hover:text-[#d63384] transition-colors">
+                  +590 691 23 29 05
                 </a>
               </li>
               <li>Lundi - Vendredi : 9h00 - 18h00</li>
