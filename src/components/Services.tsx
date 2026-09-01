@@ -14,6 +14,12 @@ import {
 
 const services = [
   {
+    icon: Sparkles,
+    title: "Prestation à la carte",
+    description:
+      "Un besoin spécifique non listé ici ? Contactez-moi pour construire ensemble une solution sur mesure, parfaitement adaptée à vos exigences.",
+  },
+  {
     icon: FileText,
     title: "Gestion administrative",
     description:
@@ -54,12 +60,6 @@ const services = [
     title: "Suivi pour TPE, indépendants et associations",
     description:
       "Un accompagnement sur mesure adapté à vos besoins spécifiques. Une solution flexible et personnalisée pour chaque structure.",
-  },
-  {
-    icon: Sparkles,
-    title: "Prestation à la carte",
-    description:
-      "Un besoin spécifique non listé ici ? Contactez-moi pour construire ensemble une solution sur mesure, parfaitement adaptée à vos exigences.",
   },
 ];
 
