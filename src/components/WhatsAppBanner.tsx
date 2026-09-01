@@ -29,7 +29,7 @@ const WhatsAppBanner = () => {
           </div>
 
           <a
-            href="https://wa.me/33691232905"
+            href="https://wa.me/590691232905"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-[#25D366] px-8 py-4 rounded-full hover:bg-[#1a3a5c] hover:text-white transition-all duration-300 font-semibold shadow-lg hover:shadow-xl whitespace-nowrap"

@@ -74,7 +74,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="tel:+33691232905"
+                  href="tel:+590691232905"
                   className="flex items-center gap-4 group"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-[#d63384] to-[#f59e0b] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -87,7 +87,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://wa.me/33691232905"
+                  href="https://wa.me/590691232905"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
