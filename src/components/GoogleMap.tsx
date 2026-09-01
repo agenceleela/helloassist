@@ -22,9 +22,6 @@ const GoogleMap = () => {
             Retrouvez-moi{" "}
             <span className="script-accent text-5xl md:text-6xl">au Moule</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Hello Assist est basée au Moule, en Guadeloupe. Venez nous rencontrer ou contactez-nous à distance.
-          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
