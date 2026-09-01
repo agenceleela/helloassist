@@ -59,7 +59,7 @@ const Contact = () => {
 
               <div className="space-y-6">
                 <a
-                  href="mailto:contact@helloassist.fr"
+                  href="mailto:helloassist.contact@gmail.com"
                   className="flex items-center gap-4 group"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-[#d63384] to-[#f59e0b] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -68,7 +68,7 @@ const Contact = () => {
                   <div>
                     <p className="text-sm text-gray-500">Email</p>
                     <p className="text-[#1a3a5c] font-medium">
-                      contact@helloassist.fr
+                      helloassist.contact@gmail.com
                     </p>
                   </div>
                 </a>
