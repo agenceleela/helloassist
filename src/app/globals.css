@@ -34,6 +34,9 @@ html {
 .script-accent {
   font-family: 'Brush Script MT', cursive;
   color: var(--pink);
+  font-size: 1.75rem; /* Augmentation de la taille (environ 28px) */
+  display: inline-block;
+  line-height: 1.2;
 }
 
 /* Custom scrollbar */
