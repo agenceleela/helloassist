@@ -41,9 +41,7 @@ const TargetAudience = () => {
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             J'accompagne{" "}
-            <span className="script-accent text-[#f59e0b] text-4xl">
-              tous les profils
-            </span>
+            <span className="script-accent text-5xl md:text-6xl">tous les profils</span>
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
             Que vous soyez une petite entreprise, un travailleur indépendant ou
