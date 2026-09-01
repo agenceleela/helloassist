@@ -19,7 +19,7 @@ const GoogleMap = () => {
             Localisation
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1a3a5c] mb-4">
-            Retrouvez-nous{" "}
+            Retrouvez-moi{" "}
             <span className="script-accent text-5xl md:text-6xl">au Moule</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
