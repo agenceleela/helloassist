@@ -21,7 +21,7 @@ export default function ArticlePME() {
             Entreprises & PME
           </span>
           <h1 className="text-3xl md:text-4xl font-bold text-[#1a3a5c] mb-4">
-            Comment optimiser la gestion administrative de votre PME en Guadeloupe en 2024 ?
+            Comment optimiser la gestion administrative de votre PME en Guadeloupe en 2026 ?
           </h1>
           <p className="text-gray-600 text-lg">
             Entre les délais de l'URSSAF, la gestion des devis et le suivi client, la charge administrative pèse lourd. Découvrez comment le secrétariat à distance peut devenir votre meilleur allié local.
