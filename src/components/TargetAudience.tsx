@@ -1,14 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, User, Heart } from "lucide-react";
+import { Building2, User, Heart, Stethoscope, UserCircle, HeartHandshake, GraduationCap } from "lucide-react";
 
 const targetAudience = [
   {
     icon: Building2,
-    title: "TPE",
+    title: "TPE & PME",
     description:
-      "Petites entreprises qui ont besoin d'un soutien administratif flexible et adapté à leur croissance.",
+      "Petites et moyennes entreprises qui ont besoin d'un soutien administratif flexible et adapté à leur croissance.",
+  },
+  {
+    icon: Stethoscope,
+    title: "Professions libérales",
+    description:
+      "Infirmiers, chauffeurs VTC, thérapeutes... Professionnels indépendants des secteurs santé, transport et services.",
   },
   {
     icon: User,
@@ -21,6 +27,24 @@ const targetAudience = [
     title: "Associations",
     description:
       "Structures associatives qui nécessitent une gestion administrative rigoureuse avec un budget maîtrisé.",
+  },
+  {
+    icon: UserCircle,
+    title: "Particuliers",
+    description:
+      "Familles et individus qui souhaitent simplifier leurs démarches administratives du quotidien.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Seniors",
+    description:
+      "Personnes âgées qui ont besoin d'un accompagnement bienveillant pour leurs démarches et courriers.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Étudiants",
+    description:
+      "Jeunes actifs en formation qui cherchent de l'aide pour leurs dossiers administratifs et financiers.",
   },
 ];
 
@@ -44,13 +68,12 @@ const TargetAudience = () => {
             <span className="script-accent text-5xl md:text-6xl">tous les profils</span>
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            Que vous soyez une petite entreprise, un travailleur indépendant ou
-            une association, je m'adapte à vos besoins spécifiques.
+            Des entreprises aux particuliers, en passant par les associations et les professionnels de santé, je m'adapte à vos besoins spécifiques.
           </p>
         </motion.div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {targetAudience.map((item, index) => (
             <motion.div
               key={item.title}
