@@ -40,7 +40,7 @@ const googleReviews = [
 ];
 
 // Lien pour laisser un avis Google
-const GOOGLE_REVIEW_LINK = "https://g.page/r/CiZx8F9vZ3kREAI/review";
+const GOOGLE_REVIEW_LINK = "https://www.google.com/search?sa=X&sca_esv=ba1feb9f312c2a43&biw=1404&bih=743&sxsrf=APpeQnuwRTIr05uDAKZa70CUo_ZlBk_yWg:1788248382128&kgmid=/g/11nj1byl_z&q=Hello+Assist&shem=dlvs1,epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/uni/m1/1&kgs=0ad7c49b1e93bdb4&utm_source=dlvs1,epsd1,ltae,rimspwouoe,sh/x/loc/uni/m1/1";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
