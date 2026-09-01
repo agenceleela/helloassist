@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">
-              Hello <span className="script-accent text-4xl md:text-5xl text-[#d63384]">Assist</span>
+              Hello <span className="script-accent text-3xl md:text-4xl text-[#d63384]">Assist</span>
             </h3>
             <p className="text-white/80 mb-6 max-w-md">
               Votre secrétaire indépendante. Passez la main... et c'est fait.
