@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,14 +51,23 @@ export const metadata: Metadata = {
   },
 };
 
-// CORRECTION ICI : on utilise le typage standard de React pour les enfants
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-[#faf9f7]">
+        {/* Ces composants seront maintenant visibles sur TOUTES les pages */}
+        <Navbar />
+        
+        <main className="flex-grow">
+          {children}
+        </main>
+        
+        <Footer />
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }
