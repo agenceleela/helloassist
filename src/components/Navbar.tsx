@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -15,12 +16,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Utilisation de chemins absolus pour que les liens fonctionnent depuis n'importe quelle page
   const navLinks = [
-    { name: "Accueil", href: "#accueil" },
-    { name: "Services", href: "#services" },
-    { name: "À propos", href: "#about" },
-    { name: "Actualités", href: "#blog" },
-    { name: "Contact", href: "#contact" },
+    { name: "Accueil", href: "/#accueil" },
+    { name: "Services", href: "/#services" },
+    { name: "À propos", href: "/#about" },
+    { name: "Actualités", href: "/#blog" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -32,31 +34,31 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
-          <a href="#accueil" className="flex items-center space-x-2">
+          <Link href="/#accueil" className="flex items-center space-x-2">
             <img 
               src="/logo.png" 
               alt="Hello Assist Logo" 
               className="h-12 md:h-16 w-auto object-contain" 
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="text-[#1a3a5c] hover:text-[#d63384] transition-colors duration-200 font-medium"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="bg-[#d63384] text-white px-6 py-2.5 rounded-full hover:bg-[#1a3a5c] transition-all duration-300 font-medium shadow-md hover:shadow-lg"
             >
               Demander un devis
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -74,22 +76,22 @@ const Navbar = () => {
           <div className="md:hidden bg-white border-t border-gray-100 py-4">
             <div className="flex flex-col space-y-4 px-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   className="text-[#1a3a5c] hover:text-[#d63384] transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#contact"
+              <Link
+                href="/#contact"
                 className="bg-[#d63384] text-white px-6 py-3 rounded-full hover:bg-[#1a3a5c] transition-all duration-300 font-medium text-center shadow-md"
                 onClick={() => setIsOpen(false)}
               >
                 Demander un devis
-              </a>
+              </Link>
             </div>
           </div>
         )}
