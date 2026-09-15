@@ -95,6 +95,26 @@ const TargetAudience = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Office Image - Same style as Hero */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-20 max-w-4xl mx-auto"
+        >
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#d63384]/20 to-[#f59e0b]/20 rounded-3xl transform rotate-6"></div>
+            <div className="relative bg-white rounded-3xl p-4 shadow-2xl">
+              <img 
+                src="/image_office.png" 
+                alt="Bureau Hello Assist" 
+                className="w-full h-auto object-cover rounded-2xl" 
+              />
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
