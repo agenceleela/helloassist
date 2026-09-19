@@ -90,7 +90,7 @@ const ComingSoon = () => {
         </svg>
       </div>
 
-      {/* ===== Contenu : budget vertical strict ===== */}
+      {/* ===== Contenu ===== */}
       <div className="relative z-10 flex flex-col flex-1 px-6 md:px-12 pt-4 pb-4 md:pt-6 md:pb-6 max-w-6xl mx-auto w-full">
         {/* Header : logo + bannière */}
         <div className="flex items-start justify-between gap-4 mb-4 md:mb-6">
@@ -105,47 +105,38 @@ const ComingSoon = () => {
           </span>
         </div>
 
-        {/* Rangée : pictos à gauche + slogan à droite */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 mb-4 md:mb-6">
-          {/* Pictos : 4 en ligne sur mobile, carré 2x2 compact sur desktop */}
-          <div className="grid grid-cols-4 md:grid-cols-2 gap-x-4 gap-y-4 md:gap-x-10 md:gap-y-4 justify-items-center md:justify-items-start">
-            {features.map((feature) => (
-              <div key={feature.label} className="flex flex-col items-center text-center">
-                <div
-                  className={`w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-1.5 ${feature.bg}`}
-                >
-                  <feature.icon
-                    className="text-[#1a3a5c]"
-                    size={18}
-                    strokeWidth={1.8}
-                  />
-                </div>
-                <p className="text-[10px] md:text-xs font-semibold text-[#1a3a5c] leading-snug max-w-[70px] md:max-w-[110px]">
-                  {feature.label}
-                </p>
-              </div>
-            ))}
-          </div>
+        {/* Slogan centré sur 2 lignes */}
+        <div className="text-center mb-4 md:mb-6">
+          <p className="text-2xl md:text-4xl font-bold text-[#1a3a5c] leading-tight">
+            Passez la main...
+          </p>
+          <p className="script-accent text-3xl md:text-5xl leading-tight">et c'est fait !</p>
+          <svg
+            className="mt-1.5 w-28 md:w-40 mx-auto text-[#f3c3d4]"
+            viewBox="0 0 220 14"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="5"
+            strokeLinecap="round"
+          >
+            <path d="M6 9 C 60 3, 150 3, 214 8" />
+          </svg>
+        </div>
 
-          {/* Slogan poussé à droite */}
-          <div className="text-center md:text-left md:ml-auto md:pr-4">
-            <p className="text-2xl md:text-4xl font-bold text-[#1a3a5c] leading-tight">
-              Passez
-              <br />
-              la main...
-            </p>
-            <p className="script-accent text-3xl md:text-5xl leading-tight">et c'est fait !</p>
-            <svg
-              className="mt-1.5 w-28 md:w-40 mx-auto md:mx-0 text-[#f3c3d4]"
-              viewBox="0 0 220 14"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="5"
-              strokeLinecap="round"
-            >
-              <path d="M6 9 C 60 3, 150 3, 214 8" />
-            </svg>
-          </div>
+        {/* Pictos centrés en dessous du slogan */}
+        <div className="grid grid-cols-4 gap-4 md:gap-10 justify-items-center max-w-md md:max-w-2xl mx-auto w-full mb-4 md:mb-6">
+          {features.map((feature) => (
+            <div key={feature.label} className="flex flex-col items-center text-center">
+              <div
+                className={`w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center mb-1.5 ${feature.bg}`}
+              >
+                <feature.icon className="text-[#1a3a5c]" size={18} strokeWidth={1.8} />
+              </div>
+              <p className="text-[10px] md:text-xs font-semibold text-[#1a3a5c] leading-snug max-w-[70px] md:max-w-[110px]">
+                {feature.label}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Bloc central : annonce + formulaire + sociaux */}
