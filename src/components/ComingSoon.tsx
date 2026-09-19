@@ -2,7 +2,24 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Bell, ArrowRight, CheckCircle, Mail, Sparkles } from "lucide-react";
+import {
+  Bell,
+  ArrowRight,
+  CheckCircle,
+  Mail,
+  Sparkles,
+  FileText,
+  Calendar,
+  CheckSquare,
+  Laptop,
+} from "lucide-react";
+
+const features = [
+  { icon: FileText, label: "Vos démarches", bg: "bg-[#fbdce6]" },
+  { icon: Calendar, label: "Votre organisation", bg: "bg-[#fbdce6]" },
+  { icon: CheckSquare, label: "Votre gestion", bg: "bg-[#fbdce6]" },
+  { icon: Laptop, label: "Plus de temps pour vous", bg: "bg-[#cfe0f4]" },
+];
 
 const ComingSoon = () => {
   const [email, setEmail] = useState("");
@@ -99,24 +116,43 @@ const ComingSoon = () => {
           </span>
         </div>
 
-        {/* Slogan aligné à gauche */}
-        <div className="mb-6">
-          <p className="text-3xl md:text-5xl font-bold text-[#1a3a5c] leading-tight">
-            Passez
-            <br />
-            la main...
-          </p>
-          <p className="script-accent text-4xl md:text-6xl leading-tight">et c'est fait !</p>
-          <svg
-            className="mt-2 w-32 md:w-48 text-[#f3c3d4]"
-            viewBox="0 0 220 14"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="5"
-            strokeLinecap="round"
-          >
-            <path d="M6 9 C 60 3, 150 3, 214 8" />
-          </svg>
+        {/* Pictos 2x2 à gauche + slogan à droite */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-6">
+          {/* Carré de 4 pictos */}
+          <div className="grid grid-cols-2 gap-x-6 gap-y-5 justify-items-center">
+            {features.map((feature) => (
+              <div key={feature.label} className="flex flex-col items-center text-center">
+                <div
+                  className={`w-14 h-14 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-2 ${feature.bg}`}
+                >
+                  <feature.icon className="text-[#1a3a5c]" size={26} strokeWidth={1.8} />
+                </div>
+                <p className="text-sm md:text-base font-semibold text-[#1a3a5c] leading-snug max-w-[110px] md:max-w-[140px]">
+                  {feature.label}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Slogan à droite des pictos */}
+          <div className="text-center md:text-left">
+            <p className="text-3xl md:text-5xl font-bold text-[#1a3a5c] leading-tight">
+              Passez
+              <br />
+              la main...
+            </p>
+            <p className="script-accent text-4xl md:text-6xl leading-tight">et c'est fait !</p>
+            <svg
+              className="mt-2 w-32 md:w-48 mx-auto md:mx-0 text-[#f3c3d4]"
+              viewBox="0 0 220 14"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="5"
+              strokeLinecap="round"
+            >
+              <path d="M6 9 C 60 3, 150 3, 214 8" />
+            </svg>
+          </div>
         </div>
 
         {/* Annonce centrée */}
