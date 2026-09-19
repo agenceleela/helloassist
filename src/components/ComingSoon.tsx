@@ -13,6 +13,7 @@ import {
   CheckSquare,
   Laptop,
 } from "lucide-react";
+import { FORMSPREE_NEWSLETTER } from "@/config";
 
 const features = [
   { icon: FileText, label: "Vos démarches", bg: "bg-[#fbdce6]" },
@@ -23,12 +24,29 @@ const features = [
 
 const ComingSoon = () => {
   const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) {
-      setSubscribed(true);
+    if (!email.trim()) return;
+    setStatus("sending");
+    try {
+      const res = await fetch(FORMSPREE_NEWSLETTER, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setEmail("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
     }
   };
 
@@ -157,9 +175,9 @@ const ComingSoon = () => {
             administratives, votre organisation et votre gestion quotidienne.
           </p>
 
-          {/* Formulaire compact */}
+          {/* Formulaire connecté à Formspree */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-4 md:p-5 mb-4 text-left">
-            {subscribed ? (
+            {status === "success" ? (
               <div className="flex items-center justify-center gap-3 text-[#1a3a5c] font-semibold text-center text-sm md:text-base">
                 <CheckCircle className="text-[#10b981] flex-shrink-0" size={20} />
                 Merci ! Vous serez parmi les premières personnes informées du lancement.
@@ -184,18 +202,25 @@ const ComingSoon = () => {
                     type="email"
                     required
                     value={email}
+                    disabled={status === "sending"}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="E-mail"
-                    className="flex-1 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-sm md:text-base focus:border-[#d63384] focus:ring-2 focus:ring-[#d63384]/20 outline-none transition-all"
+                    className="flex-1 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-sm md:text-base focus:border-[#d63384] focus:ring-2 focus:ring-[#d63384]/20 outline-none transition-all disabled:opacity-60"
                   />
                   <button
                     type="submit"
+                    disabled={status === "sending"}
                     aria-label="S'inscrire"
-                    className="w-10 h-10 flex-shrink-0 rounded-full bg-[#d63384] text-white flex items-center justify-center hover:bg-[#1a3a5c] transition-colors duration-300 shadow-md"
+                    className="w-10 h-10 flex-shrink-0 rounded-full bg-[#d63384] text-white flex items-center justify-center hover:bg-[#1a3a5c] transition-colors duration-300 shadow-md disabled:opacity-60"
                   >
                     <ArrowRight size={16} />
                   </button>
                 </form>
+                {status === "error" && (
+                  <p className="mt-2 text-xs text-red-500">
+                    Oups, une erreur est survenue. Réessayez dans un instant.
+                  </p>
+                )}
               </>
             )}
           </div>

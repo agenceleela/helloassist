@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, Send } from "lucide-react";
+import { FORMSPREE_CONTACT } from "@/config";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,12 +11,33 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Merci pour votre message ! Je vous recontacterai dans les plus brefs délais.");
-    setFormData({ name: "", email: "", message: "" });
+    setStatus("sending");
+    try {
+      const res = await fetch(FORMSPREE_CONTACT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -81,7 +103,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Téléphone</p>
-                    <p className="text-[#1a3a5c] font-medium">+590 691 23 29 05</p>
+                    <p className="text-[#1a3a5c] font-medium">06 91 23 29 05</p>
                   </div>
                 </a>
 
@@ -138,8 +160,9 @@ const Contact = () => {
                     type="text"
                     id="name"
                     value={formData.name}
+                    disabled={status === "sending"}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d63384] focus:ring-2 focus:ring-[#d63384]/20 outline-none transition-all duration-200"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d63384] focus:ring-2 focus:ring-[#d63384]/20 outline-none transition-all duration-200 disabled:opacity-60"
                     placeholder="Votre nom"
                     required
                   />
@@ -153,8 +176,9 @@ const Contact = () => {
                     type="email"
                     id="email"
                     value={formData.email}
+                    disabled={status === "sending"}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d63384] focus:ring-2 focus:ring-[#d63384]/20 outline-none transition-all duration-200"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d63384] focus:ring-2 focus:ring-[#d63384]/20 outline-none transition-all duration-200 disabled:opacity-60"
                     placeholder="votre@email.com"
                     required
                   />
@@ -168,8 +192,9 @@ const Contact = () => {
                     id="message"
                     rows={5}
                     value={formData.message}
+                    disabled={status === "sending"}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d63384] focus:ring-2 focus:ring-[#d63384]/20 outline-none transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d63384] focus:ring-2 focus:ring-[#d63384]/20 outline-none transition-all duration-200 resize-none disabled:opacity-60"
                     placeholder="Décrivez votre projet ou votre demande..."
                     required
                   />
@@ -177,11 +202,23 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#d63384] to-[#f59e0b] text-white py-4 rounded-full hover:shadow-lg hover:scale-[1.02] transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+                  disabled={status === "sending"}
+                  className="w-full bg-gradient-to-r from-[#d63384] to-[#f59e0b] text-white py-4 rounded-full hover:shadow-lg hover:scale-[1.02] transition-all duration-300 font-semibold flex items-center justify-center gap-2 disabled:opacity-60"
                 >
                   <Send size={20} />
-                  Envoyer mon message
+                  {status === "sending" ? "Envoi en cours..." : "Envoyer mon message"}
                 </button>
+
+                {status === "success" && (
+                  <p className="text-sm text-center text-[#10b981] font-semibold">
+                    Merci pour votre message ! Je vous recontacterai dans les plus brefs délais.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-sm text-center text-red-500 font-semibold">
+                    Oups, une erreur est survenue. Réessayez ou contactez-moi directement par e-mail.
+                  </p>
+                )}
               </div>
             </form>
           </motion.div>
